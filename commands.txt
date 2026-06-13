@@ -1,0 +1,20 @@
+# Go to your repository (where all your Laravel apps will live)
+cd /D "E:\XAMPP\htdocs\Laravel 12 by Code Step By Step\laravel_12_course_by_code_step_by_step"
+
+# Create a new app (each app gets its own folder)
+laravel new my-first-app
+laravel new my-second-app
+laravel new my-blog-app
+laravel new my-ecommerce-app
+
+# Navigate into the specific app you want to work on
+cd my-first-app
+
+# Configure its database
+notepad .env
+
+# Run migrations
+php artisan migrate
+
+# Start server
+php artisan serve
