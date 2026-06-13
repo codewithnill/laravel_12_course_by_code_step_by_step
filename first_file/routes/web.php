@@ -25,3 +25,7 @@ Route::get('/about',function () {
 Route::get('/about/{name}',function ($name) {
     return view('about',['name'=>$name]);
 });
+
+
+// redirect 
+route::redirect('/home','/'); // / indicates go to welcome page when user access home page in the url
