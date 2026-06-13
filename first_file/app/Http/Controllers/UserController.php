@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
     function getUser() {
-        return "NB Nill";
+        // return "NB Nill";
+        return view('user');
     }
 
     function aboutUser() {
@@ -15,6 +16,7 @@ class UserController extends Controller
     }
 
     function getUserName($name) {
-        return "Hello this is ". $name;
+        // echo "Hello this is ". $name;
+        return view('getUser',['name'=>$name]);
     }
 }
