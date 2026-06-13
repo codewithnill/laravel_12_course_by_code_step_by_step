@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController; // for the controller created recently
+
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,4 +32,17 @@ Route::get('/about/{name}',function ($name) {
 
 
 // redirect 
-route::redirect('/home','/'); // / indicates go to welcome page when user access home page in the url
+//route::redirect('/home','/'); // / indicates go to welcome page when user access home page in the url
+
+
+
+// creating a route for the user controller and its function
+Route::get('user',[UserController::class,'getUser']);
+// enter http://localhost:8000/user in the url to get the result
+
+Route::get('about',[UserController::class,'aboutUser']);
+// When we register two routes with the same method and path, the last one wins and overwrites the first one.
+
+Route::get('user/{name}',[UserController::class,'getUserName']);
+
+
