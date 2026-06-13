@@ -16,7 +16,12 @@ Route::get('/about',function () {
     return view('about');
 });
 
+// Route::get('/about/{name}',function ($name) {
+//     echo $name;
+//     return view('about');
+// });
+
+// putting the name as parameter inside view
 Route::get('/about/{name}',function ($name) {
-    echo $name;
-    return view('about');
+    return view('about',['name'=>$name]);
 });
