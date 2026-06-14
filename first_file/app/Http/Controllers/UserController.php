@@ -19,4 +19,8 @@ class UserController extends Controller
         // echo "Hello this is ". $name;
         return view('getUser',['name'=>$name]);
     }
+
+    function adminLogin() {
+        return view('admin.login');
+    }
 }

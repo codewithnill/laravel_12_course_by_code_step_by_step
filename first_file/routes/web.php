@@ -46,3 +46,7 @@ Route::get('about',[UserController::class,'aboutUser']);
 Route::get('user/{name}',[UserController::class,'getUserName']);
 
 
+Route::get('admin-login',[UserController::class,'adminLogin']);
+Route::view('/admin', 'admin.login'); // this is the shortcut for the above code. It will return the home view when the user visits the /home url.
+
+
