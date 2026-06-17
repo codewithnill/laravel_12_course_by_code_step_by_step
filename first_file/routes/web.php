@@ -43,6 +43,8 @@ Route::get('user',[UserController::class,'getUser']);
 Route::get('user-about/{name}',[UserController::class,'userAbout']);
 // When we register two routes with the same method and path, the last one wins and overwrites the first one.
 
+// Route::get('user-about',[UserController::class,'userAbout']);
+
 Route::get('user/{name}',[UserController::class,'getUserName']);
 
 

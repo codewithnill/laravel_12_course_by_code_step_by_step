@@ -1,3 +1,5 @@
+@include('common.header') 
+
 <h1>About</h1>
 
 <!-- double braces cause it is a blade.php -->
