@@ -8,6 +8,17 @@
 <h1>{{rand()}}</h1>
 
 
+<x-message-banner /> <!-- this is how we include the message-banner component in the home page.  -->
+<style>
+.success{
+    color: green;
+    background-color: lightgreen;
+    padding: 3px 10px;
+}
+</style>
+    
+
+
 {{-- <h1>{{$users}}</h1> --}}
 {{-- this gives error --}}
 
