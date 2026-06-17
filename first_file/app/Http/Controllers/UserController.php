@@ -41,4 +41,13 @@ class UserController extends Controller
             echo "No view found";
         }
     }
+
+
+
+    function userHome() {
+        $name='NB Nill';
+        // return view('home');
+        $users=['NB Nill','John Doe','Jane Doe'];
+        return view('home',['name'=>$name,'users'=>$users]);
+    }
 }
