@@ -5,6 +5,9 @@
 {{-- @include('common.common',['page'=>"this is about page"])
 error message : View [common.common] not found. --}}
 
+@includeIf('common.common',['page'=>"this is about page"])
+<!-- load if exists, if not exists, do nothing -->
+
 <h1>About</h1>
 
 <!-- double braces cause it is a blade.php -->
