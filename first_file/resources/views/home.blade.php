@@ -1,4 +1,6 @@
 @include('common.header') <!-- this is how we include the header file in the home page.  -->
+@include('common.inner')
+
 
 <h1>Home page no blade</h1>
 <a href="/">Welcome {{$name}}</a>
