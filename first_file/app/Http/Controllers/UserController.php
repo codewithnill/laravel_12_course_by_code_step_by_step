@@ -11,8 +11,9 @@ class UserController extends Controller
         return view('user');
     }
 
-    function aboutUser() {
-        return "Hello this is NB Nill";
+    function userAbout($name) {
+        // return "Hello this is NB Nill";
+        return view('about',['user'=>$name]);
     }
 
     function getUserName($name) {

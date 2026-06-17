@@ -40,7 +40,7 @@ Route::get('/about/{name}',function ($name) {
 Route::get('user',[UserController::class,'getUser']);
 // enter http://localhost:8000/user in the url to get the result
 
-Route::get('about',[UserController::class,'aboutUser']);
+Route::get('user-about/{name}',[UserController::class,'userAbout']);
 // When we register two routes with the same method and path, the last one wins and overwrites the first one.
 
 Route::get('user/{name}',[UserController::class,'getUserName']);
