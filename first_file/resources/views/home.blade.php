@@ -1,3 +1,5 @@
+@include('common.header') <!-- this is how we include the header file in the home page.  -->
+
 <h1>Home page no blade</h1>
 <a href="/">Welcome {{$name}}</a>
 <a href="/about/nbnill">About page</a>
