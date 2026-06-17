@@ -27,7 +27,7 @@ Route::get('/about',function () {
 
 // putting the name as parameter inside view
 Route::get('/about/{name}',function ($name) {
-    return view('about',['name'=>$name]);
+    return view('about',['user'=>$name]);
 });
 
 

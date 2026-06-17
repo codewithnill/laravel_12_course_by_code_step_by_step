@@ -9,11 +9,15 @@
 
 
 <x-message-banner /> <!-- this is how we include the message-banner component in the home page.  -->
+<x-message-banner />
 <style>
 .success{
     color: green;
     background-color: lightgreen;
     padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
 }
 </style>
     

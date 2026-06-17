@@ -8,9 +8,21 @@ error message : View [common.common] not found. --}}
 @includeIf('common.common',['page'=>"this is about page"])
 <!-- load if exists, if not exists, do nothing -->
 
+<x-message-banner />
+<style>
+.success{
+    color: green;
+    background-color: lightgreen;
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
+}
+</style>
+
 <h1>About</h1>
 
-<!-- double braces cause it is a blade.php -->
-<!-- <h1>{{ $user }}</h1> -->
+{{-- double braces cause it is a blade.php --}}
+{{-- <h1>{{ $user }}</h1> --}}
 <h1>User name is {{$user}}</h1>
 <!-- calling from UserController.php, return view('about',['user'=>$name]); -->
