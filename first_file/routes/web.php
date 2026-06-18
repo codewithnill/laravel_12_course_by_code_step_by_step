@@ -57,3 +57,7 @@ Route::get('user-home',[UserController::class,'userHome']);
 
 Route::view('user-form', 'user-form');
 Route::post('add-user',[UserController::class,'addUser']); // calling the addUser function in the UserController.php file when the user submits the form. The form method is post, so we use Route::post() method to register the route. The first parameter is the url, the second parameter is the controller and the function that we want to call when the user submits the form. 
+
+
+Route::view('user-form-2', 'user-form-2');
+Route::post('adduser2',[UserController::class,'addUser2']);  

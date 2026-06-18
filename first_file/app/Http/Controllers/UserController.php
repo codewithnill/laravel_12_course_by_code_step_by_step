@@ -67,4 +67,20 @@ class UserController extends Controller
         echo "user city : ".$request->city;
 
     }
+
+
+
+    function addUser2(Request $request) {
+        // echo "User added successfully";
+        // return $request;
+        print_r("user skills : ");
+        print_r($request->skill);
+        echo "<br>";
+        echo "user gender : ".$request->gender;
+        echo "<br>";
+        echo "user city : ".$request->city;
+        echo "<br>";
+        echo "user age : ".$request->age;
+
+    }   
 }
