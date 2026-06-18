@@ -8,12 +8,36 @@
 <h1>{{rand()}}</h1>
 
 
-<x-message-banner /> <!-- this is how we include the message-banner component in the home page.  -->
-<x-message-banner />
+<x-message-banner class="success" msg="user login successful"/> <!-- this is how we include the message-banner component in the home page.  --> 
+<x-message-banner class="success" msg="user signup successful"/> <!-- we can also pass data to the component by writing it as an attribute. In this case, we are passing the msg variable with the value "user signup successful" to the message-banner component.  -->
+
+<x-message-banner class="error" msg="password not correct please try again"/> 
+<x-message-banner class="warning" msg="password not correct please try again"/> 
+
+
+
 <style>
 .success{
     color: green;
     background-color: lightgreen;
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.error{
+    color: red;
+    background-color: lightcoral;
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.warning{
+    color: orange;
+    background-color: lightyellow;
     padding: 3px 10px;
     border-radius: 2px;
     display: inline-block;

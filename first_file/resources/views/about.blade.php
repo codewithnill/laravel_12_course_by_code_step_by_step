@@ -8,11 +8,30 @@ error message : View [common.common] not found. --}}
 @includeIf('common.common',['page'=>"this is about page"])
 <!-- load if exists, if not exists, do nothing -->
 
-<x-message-banner />
+<x-message-banner msg="about user msg" class="success"/>
+<x-message-banner msg="went something wrong" class="warning"/>
 <style>
 .success{
     color: green;
     background-color: lightgreen;
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.error{
+    color: red;
+    background-color: lightcoral;
+    padding: 3px 10px;
+    border-radius: 2px;
+    display: inline-block;
+    margin: 10px;
+}
+
+.warning{
+    color: orange;
+    background-color: lightyellow;
     padding: 3px 10px;
     border-radius: 2px;
     display: inline-block;
