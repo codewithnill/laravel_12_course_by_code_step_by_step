@@ -50,4 +50,14 @@ class UserController extends Controller
         $users=['NB Nill','John Doe','Jane Doe'];
         return view('home',['name'=>$name,'users'=>$users]);
     }
+
+
+
+
+
+
+
+    function addUser(){
+        echo "User added successfully";
+    }
 }
