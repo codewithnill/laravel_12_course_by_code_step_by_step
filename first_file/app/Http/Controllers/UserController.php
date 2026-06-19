@@ -67,10 +67,15 @@ class UserController extends Controller
         // echo "user city : ".$request->city;
 
         $request->validate([            
-            'username'=>'required|min:3|max:10',
+            'username'=>'required|min:3|max:15',
             'email'=>'required|email',
             'city'=>'required | max:10',
             'skill'=>'required'
+        ],[
+            'username.required'=>'Username field cannot be empty',
+            'username.min'=>'Username must be at least 3 characters',
+            'username.max'=>'Username cannot be more than 15 characters',
+            'email.email'=>'not a valid email address',
         ]);
         return $request;
     }

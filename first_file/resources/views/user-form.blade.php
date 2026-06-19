@@ -61,7 +61,7 @@
     }
 
     .input-wrapper{
-        magin: 20px;
+        margin-bottom: 20px;
     }
 
     button{
@@ -72,6 +72,7 @@
         color: orange;
         background-color: #fff;
         cursor: pointer;
+        margin-top: 10px;
     }
 </style>
 
