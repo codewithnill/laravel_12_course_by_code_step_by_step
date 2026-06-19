@@ -75,7 +75,7 @@ class UserController extends Controller
             'username.required'=>'Username field cannot be empty',
             'username.min'=>'Username must be at least 3 characters',
             'username.max'=>'Username cannot be more than 15 characters',
-            // 'email.email'=>'not a valid email address',
+            'email.email'=>'not a valid email address',
         ]);
         return $request;
     }
