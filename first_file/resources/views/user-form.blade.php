@@ -3,13 +3,13 @@
 
 
 
-    @if($errors->any())
+    <!-- @if($errors->any())
     @foreach($errors->all() as $error)
     <div style="color: red">
         {{$error}}
     </div>
     @endforeach
-    @endif
+    @endif -->
 
 
 
@@ -18,14 +18,17 @@
         @csrf
         <div class="input-wrapper">
             <input class="text" type="text" name="username" placeholder="Enter user name">
+            <span style="color: red">@error('username'){{$message}}@enderror</span>
         </div>
 
         <div class="input-wrapper">
             <input class="text" type="text" name="email" placeholder="Enter user email">
+            <span style="color: red">@error('email'){{$message}}@enderror</span>
         </div>
 
         <div class="input-wrapper">
             <input class="text" type="text" name="city" placeholder="Enter user city">
+            <span style="color: red">@error('city'){{$message}}@enderror</span>
         </div>
 
         <div>
@@ -38,6 +41,7 @@
         
             <input type="checkbox" id="java" name="skill[]" value="java"> 
             <label for="java">Java</label>
+            <span style="color: red">@error('skill'){{$message}}@enderror</span>
         </div>
 
         <div class="input-wrapper">

@@ -67,9 +67,9 @@ class UserController extends Controller
         // echo "user city : ".$request->city;
 
         $request->validate([            
-            'username'=>'required',
-            'email'=>'required',
-            'city'=>'required',
+            'username'=>'required|min:3|max:10',
+            'email'=>'required|email',
+            'city'=>'required | max:10',
             'skill'=>'required'
         ]);
         return $request;
