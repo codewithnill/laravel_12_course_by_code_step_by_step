@@ -60,12 +60,19 @@ class UserController extends Controller
     function addUser(Request $request) {
         // echo "User added successfully";
         // return $request;
-        echo "user name : ".$request->username;
-        echo "<br>";
-        echo "user email : ".$request->email;
-        echo "<br>";
-        echo "user city : ".$request->city;
+        // echo "user name : ".$request->username;
+        // echo "<br>";
+        // echo "user email : ".$request->email;
+        // echo "<br>";
+        // echo "user city : ".$request->city;
 
+        $request->validate([            
+            'username'=>'required',
+            'email'=>'required',
+            'city'=>'required',
+            'skill'=>'required'
+        ]);
+        return $request;
     }
 
 
