@@ -17,17 +17,17 @@
     <form action="add-user" method="post">
         @csrf
         <div class="input-wrapper">
-            <input class="text" type="text" name="username" placeholder="Enter user name">
+            <input class="text" type="text" name="username" value="{{old('username')}}" placeholder="Enter user name">
             <span style="color: red">@error('username'){{$message}}@enderror</span>
         </div>
 
         <div class="input-wrapper">
-            <input class="text" type="text" name="email" placeholder="Enter user email">
+            <input class="text" type="text" name="email" value="{{old('email')}}" placeholder="Enter user email">
             <span style="color: red">@error('email'){{$message}}@enderror</span>
         </div>
 
         <div class="input-wrapper">
-            <input class="text" type="text" name="city" placeholder="Enter user city">
+            <input class="text" type="text" name="city" value="{{old('city')}}" placeholder="Enter user city">
             <span style="color: red">@error('city'){{$message}}@enderror</span>
         </div>
 
