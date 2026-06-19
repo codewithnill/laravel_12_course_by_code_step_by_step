@@ -17,7 +17,7 @@
     <form action="add-user" method="post">
         @csrf
         <div class="input-wrapper">
-            <input class="text" type="text" name="username" value="{{old('username')}}" placeholder="Enter user name">
+            <input class="{{($errors->first('username')?'input-error':'')}}" type="text" name="username" value="{{old('username')}}" placeholder="Enter user name">
             <span style="color: red">@error('username'){{$message}}@enderror</span>
         </div>
 
@@ -52,12 +52,17 @@
 </div>
 
 <style>
-    .text{
+    .input-wrapper input{
         border: orange 1px solid;
         height: 35px;
         width: 200px;
         border-radius: 2px;
         color: orange;
+    }
+
+    .input-wrapper input.input-error{
+        border: red 1px solid;
+        color: red;
     }
 
     .input-wrapper{
