@@ -66,3 +66,4 @@ Route::post('adduser2',[UserController::class,'addUser2']);
 Route::view('hforurl', 'homeforurl');
 Route::view('user', 'homeforurl');
 Route::view('aforurl', 'aboutforurl');
+Route::view('wforurl', 'welcomeforurl');

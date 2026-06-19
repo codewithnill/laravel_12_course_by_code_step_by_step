@@ -1,11 +1,16 @@
 <div>
     <h1>Home page</h1>
+    <a href="/aforurl">About page</a>
+
+    <br><br>
+
+
     {{URL::current()}}
     <!-- or -->
     {{url()->current()}}
     <br>
 
-    
+
     {{URL::full()}} 
     <!-- or -->
     {{url()->full()}}
