@@ -4,5 +4,8 @@
     <!-- or -->
     <a href="{{URL::to('/aforurl')}}">About page</a>
     <a href="{{URL::to('/hforurl')}}">Home page</a>
+
+
+    <a href="{{URL::to('aforurl', ['abc'])}}">About abc</a>
     <!-- Breathing in, I calm body and mind. Breathing out, I smile. - Thich Nhat Hanh -->
 </div>
