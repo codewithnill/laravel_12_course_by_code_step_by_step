@@ -61,3 +61,8 @@ Route::post('add-user',[UserController::class,'addUser']); // calling the addUse
 
 Route::view('user-form-2', 'user-form-2');
 Route::post('adduser2',[UserController::class,'addUser2']);  
+
+// making route for new views for url
+Route::view('hforurl', 'homeforurl');
+Route::view('user', 'homeforurl');
+Route::view('aforurl', 'aboutforurl');
