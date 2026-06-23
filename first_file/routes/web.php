@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController; // for the controller created recently
 
 use App\Http\Controllers\HomeController; // for the home controller created recently
 use App\Http\Controllers\home_controller_for_route_group; // for the home controller created recently for route group
+use App\Http\Controllers\StudentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -66,14 +67,13 @@ Route::get('user/{name}',[UserController::class,'getUserName']);
 
 
 Route::get('admin-login',[UserController::class,'adminLogin']);
-// Route::view('/admin', 'admin.login'); // this is the shortcut for the above code. It will return the home view when the user visits the /admin url. But when we write this line, the else block in the adminLogin function will not execute because it will always find the view and return it. So to execute the else block, we have to comment this line.
 
 
 Route::get('user-home',[UserController::class,'userHome']);
 
 
 Route::view('user-form', 'user-form');
-Route::post('add-user',[UserController::class,'addUser']); // calling the addUser function in the UserController.php file when the user submits the form. The form method is post, so we use Route::post() method to register the route. The first parameter is the url, the second parameter is the controller and the function that we want to call when the user submits the form. 
+Route::post('add-user',[UserController::class,'addUser']); 
 
 
 Route::view('user-form-2', 'user-form-2');
@@ -111,4 +111,15 @@ Route::prefix('student/bd')->group(function () {
     Route::view('/home-for-route-group', 'home_for_route_group'); 
     Route::get('/show', [home_controller_for_route_group::class,'show']); 
     Route::get('/add', [home_controller_for_route_group::class,'add']); 
+});
+
+
+// Route::get('show',[StudentController::class,'show']);
+// Route::get('add',[StudentController::class,'add']);
+// Route::get('delete',[StudentController::class,'delete']);
+
+Route::controller(StudentController::class)->group(function() {
+    Route::get('show','show');
+Route::get('add','add');
+Route::get('delete','delete');
 });
