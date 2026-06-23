@@ -126,4 +126,7 @@ Route::controller(StudentController::class)->group(function() {
 });
 
 
+Route::view('about-middleware','about_for_middleware');
+
+
 

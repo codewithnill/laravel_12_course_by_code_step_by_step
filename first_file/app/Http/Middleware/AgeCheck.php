@@ -15,7 +15,15 @@ class AgeCheck
      */
     public function handle(Request $request, Closure $next): Response
     {
-        echo "echo from AgeCheck.php..";
+        // echo "echo from AgeCheck.php..";
+
+        // echo "<pre>";
+        // print_r($request->age);
+
+        if($request->age<18) {
+            die('You cannot visit this site.');
+        }
+
         return $next($request);    
     }
 } 
