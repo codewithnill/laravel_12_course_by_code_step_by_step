@@ -20,9 +20,9 @@ class AgeCheck
         // echo "<pre>";
         // print_r($request->age);
 
-        if($request->age<18) {
-            die('You cannot visit this site.');
-        }
+        // if($request->age<18) {
+        //     die('You cannot visit this site.');
+        // }
 
         return $next($request);    
     }
