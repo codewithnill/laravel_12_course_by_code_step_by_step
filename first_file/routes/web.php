@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController; // for the controller created recently
 
-
+use App\Http\Controllers\HomeController; // for the home controller created recently
 
 
 Route::get('/', function () {
@@ -83,3 +83,9 @@ Route::view('user', 'homeforurl');
 Route::view('aforurl', 'aboutforurl');
 Route::view('aforurl/{name}', 'aboutforurl');
 Route::view('wforurl', 'welcomeforurl');
+
+
+
+
+
+Route::get('show',[HomeController::class,'show']);
