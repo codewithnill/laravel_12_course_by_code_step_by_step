@@ -106,3 +106,9 @@ Route::prefix('student')->group(function () {
     Route::get('/show', [home_controller_for_route_group::class,'show']); 
     Route::get('/add', [home_controller_for_route_group::class,'add']); 
 });
+
+Route::prefix('student/bd')->group(function () {
+    Route::view('/home-for-route-group', 'home_for_route_group'); 
+    Route::get('/show', [home_controller_for_route_group::class,'show']); 
+    Route::get('/add', [home_controller_for_route_group::class,'add']); 
+});
