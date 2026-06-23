@@ -130,7 +130,16 @@ Route::view('about-middleware','about_for_middleware');
 
 
 Route::view('about-mg','about_for_middleware_group')->middleware('check1');
-Route::view('home-mg','home_for_middleware_group');
+// Route::view('home-mg','home_for_middleware_group');
 
 
 
+// group middleware
+
+
+Route::middleware('check1')->group(function(){
+    Route::view('about','about_for_middleware_group')->middleware('check1');
+    Route::view('contact','about_for_middleware_group')->middleware('check1');
+    Route::view('list','about_for_middleware_group')->middleware('check1');
+    Route::view('home','about_for_middleware_group')->middleware('check1');
+});
