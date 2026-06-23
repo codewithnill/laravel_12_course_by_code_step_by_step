@@ -20,12 +20,14 @@ Route::get('/', function () {
 //     return view('home', ['name' => 'Guest']);
 // });
 
-Route::get('/home', function () {
-    return view('home', [
-        'name' => 'Guest',
-        'users' => ['John', 'Jane', 'Bob'],
-    ]);
-});
+// Route::get('/home/profile/user', function () {
+//     return view('home', [
+//         'name' => 'Guest',
+//         'users' => ['John', 'Jane', 'Bob'],
+//     ]);
+// });
+
+Route::view('/home/profile/user', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']]);
 
 Route::get('/about',function () {
     return view('about');
