@@ -27,7 +27,9 @@ Route::get('/', function () {
 //     ]);
 // });
 
-Route::view('/home/profile/user', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']]);
+// Route::view('/home/profile/user', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']]);
+
+Route::view('/home/profile/user', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']])->name('hm');
 
 Route::get('/about',function () {
     return view('about');
