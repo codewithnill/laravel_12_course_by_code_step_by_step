@@ -18,4 +18,8 @@ class StudentController extends Controller
     function delete() {
         return "student deleted";
     }
+
+    function about($name) {
+        return $name;;
+    }
 }

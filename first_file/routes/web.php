@@ -120,6 +120,10 @@ Route::prefix('student/bd')->group(function () {
 
 Route::controller(StudentController::class)->group(function() {
     Route::get('show','show');
-Route::get('add','add');
-Route::get('delete','delete');
+    Route::get('add','add');
+    Route::get('delete','delete');
+    Route::get('about/{name}','about');
 });
+
+
+
