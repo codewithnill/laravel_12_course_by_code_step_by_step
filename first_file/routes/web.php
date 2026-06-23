@@ -129,4 +129,8 @@ Route::controller(StudentController::class)->group(function() {
 Route::view('about-middleware','about_for_middleware');
 
 
+Route::view('about-mg','about_for_middleware_group')->middleware('check1');
+Route::view('home-mg','home_for_middleware_group');
+
+
 
