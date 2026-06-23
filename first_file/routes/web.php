@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController; // for the controller created recently
 
 use App\Http\Controllers\HomeController; // for the home controller created recently
-
+use App\Http\Controllers\home_controller_for_route_group; // for the home controller created recently for route group
 
 Route::get('/', function () {
     return view('welcome');
@@ -95,3 +95,14 @@ Route::get('show',[HomeController::class,'show']);
 Route::view('home', 'home')->name('hm'); // this is the route named 'hm' which is defined in the web.php file. It will return the home view when the user visits the /home url. This route is used in the HomeController.php file to redirect to the home page when the user visits the /show url.
 
 Route::get('user',[HomeController::class,'user']); 
+
+
+// Route::view('student/home-for-route-group', 'home_for_route_group'); 
+// Route::get('student/show', [home_controller_for_route_group::class,'show']); 
+// Route::get('student/add', [home_controller_for_route_group::class,'add']); 
+
+Route::prefix('student')->group(function () {
+    Route::view('/home-for-route-group', 'home_for_route_group'); 
+    Route::get('/show', [home_controller_for_route_group::class,'show']); 
+    Route::get('/add', [home_controller_for_route_group::class,'add']); 
+});
