@@ -18,4 +18,8 @@ class HomeController extends Controller
 
         return to_route('hm'); // this is the shortcut for the above code. It will redirect to the route named 'hm' which is defined in the web.php file.
     }
+
+    function user(){
+        return to_route('user',["name"=>"Nill"]);
+    }
 }

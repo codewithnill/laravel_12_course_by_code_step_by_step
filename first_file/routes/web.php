@@ -31,7 +31,7 @@ Route::get('/', function () {
 
 Route::view('/home/profile/user', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']])->name('hm');
 
-Route::view('/home/profile/{name}', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']])->name('hm');
+Route::view('/home/profile/{name}', 'home', ['name' => 'Guest', 'users' => ['John', 'Jane', 'Bob']])->name('user');
 
 Route::get('/about',function () {
     return view('about');
@@ -93,3 +93,5 @@ Route::view('wforurl', 'welcomeforurl');
 Route::get('show',[HomeController::class,'show']);
 
 Route::view('home', 'home')->name('hm'); // this is the route named 'hm' which is defined in the web.php file. It will return the home view when the user visits the /home url. This route is used in the HomeController.php file to redirect to the home page when the user visits the /show url.
+
+Route::get('user',[HomeController::class,'user']); 
