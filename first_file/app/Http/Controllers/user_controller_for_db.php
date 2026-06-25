@@ -10,6 +10,6 @@ class user_controller_for_db extends Controller
     //
     function users() {
         // return "user function";
-        return DB::select('select * from users');
+        return DB::select('select * from products');
     }
 }
