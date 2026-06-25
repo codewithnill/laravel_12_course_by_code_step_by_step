@@ -9,6 +9,7 @@ use App\Http\Controllers\StudentController;
 
 use App\Http\Middleware\agecheck3;
 use App\Http\Middleware\countryCheck2;
+use App\Http\Controllers\user_controller_for_db;
 
 Route::get('/', function () {
     return view('welcome');
@@ -150,3 +151,7 @@ Route::middleware('check1')->group(function(){
 
 Route::view('home_mw','home_for_assign_mw')->middleware([agecheck3::class,countryCheck2::class]);
 Route::view('about_mw','about_for_assign_mw');
+
+
+
+Route::get('user_db',[user_controller_for_db::class,'users']);
