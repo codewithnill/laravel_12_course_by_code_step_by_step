@@ -7,6 +7,8 @@ use App\Http\Controllers\HomeController; // for the home controller created rece
 use App\Http\Controllers\home_controller_for_route_group; // for the home controller created recently for route group
 use App\Http\Controllers\StudentController;
 
+use App\Http\Middleware\agecheck3;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -143,3 +145,7 @@ Route::middleware('check1')->group(function(){
     Route::view('list','about_for_middleware_group')->middleware('check1');
     Route::view('home','about_for_middleware_group')->middleware('check1');
 });
+
+
+Route::view('home_mw','home_for_assign_mw')->middleware(agecheck3::class);
+Route::view('about_mw','about_for_assign_mw');
