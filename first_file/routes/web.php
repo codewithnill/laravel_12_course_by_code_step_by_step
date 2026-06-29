@@ -10,6 +10,7 @@ use App\Http\Controllers\StudentController;
 use App\Http\Middleware\agecheck3;
 use App\Http\Middleware\countryCheck2;
 use App\Http\Controllers\user_controller_for_db;
+use App\Http\Controllers\studentControllerDb;
 
 Route::get('/', function () {
     return view('welcome');
@@ -155,3 +156,5 @@ Route::view('about_mw','about_for_assign_mw');
 
 
 Route::get('user_db',[user_controller_for_db::class,'users']);
+
+Route::get('/students',[studentControllerDb::class,'getStudents']);
