@@ -9,6 +9,7 @@ class studentControllerDb extends Controller
     //
     function getStudents() {
         $students=\App\Models\student::all();
-        return $students;
+        // return $students;
+        return view('students',['data'=>$students]);
     }
 }
