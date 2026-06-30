@@ -11,6 +11,8 @@ class userControllerEqb extends Controller
     function queries() {
         // return "queries";
         $response=userModelEqb::all();
-        return $response;
+        // return $response;
+
+        return view('userViewEqb',['users'=>$response]);    
     }
 }
