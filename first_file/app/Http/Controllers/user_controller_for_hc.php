@@ -11,10 +11,12 @@ class user_controller_for_hc extends Controller
     function getUser() {
         $response=Http::get('https://jsonplaceholder.typicode.com/users/1');
         
-        return $response;
+        // return $response;
 
         // return $response->status();
         // return $response->body();
-        
+
+        $response = $response->body();
+        return view('user_for_hc',['data'=>json_decode($response)]);
     }
 }
