@@ -28,10 +28,18 @@ class UserControllerQB extends Controller
         //     return "Data not inserted..";
         // }
 
+        // if($result) {
+        //     return "Data updated..";
+        // } else {
+        //     return "Data not updated..";
+        // }
+
+        $result=DB::table('users')->where('name','Tony')->delete();
+
         if($result) {
-            return "Data updated..";
+            return "Data removed..";
         } else {
-            return "Data not updated..";
+            return "Data not removed..";
         }
 
         return view('userQB',['users'=>$result]);
