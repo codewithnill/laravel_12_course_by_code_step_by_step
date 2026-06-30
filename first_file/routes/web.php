@@ -14,6 +14,8 @@ use App\Http\Controllers\studentControllerDb;
 
 use App\Http\Controllers\user_controller_for_hc;
 
+use App\Http\Controllers\UserControllerQB;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -162,3 +164,5 @@ Route::get('user_db',[user_controller_for_db::class,'users']);
 Route::get('/students',[studentControllerDb::class,'getStudents']);
 
 Route::get('users-hc',[user_controller_for_hc::class,'getUser']);
+
+Route::get('users-qb',[UserControllerQB::class,'queries']);
