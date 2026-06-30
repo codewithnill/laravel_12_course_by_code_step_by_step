@@ -10,9 +10,11 @@ class userControllerEqb extends Controller
     //
     function queries() {
         // return "queries";
-        $response=userModelEqb::all();
+        // $response=userModelEqb::all();
         // return $response;
 
+        
+        $response=userModelEqb::where('phone','01711111111')->get();
         return view('userViewEqb',['users'=>$response]);    
     }
 }
