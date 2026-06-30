@@ -13,7 +13,10 @@ class UserControllerQB extends Controller
         // $result=DB::table('users')->get();
         // return $result;
 
-        $result=DB::table('users')->where('phone','01711111111')->get();
+        //$result=DB::table('users')->where('phone','01711111111')->get();
+        
+        $result=DB::table('users')->first();
+        $result=[$result]; // single result so used array
         return view('userQB',['users'=>$result]);
     }
 }
