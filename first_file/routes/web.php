@@ -12,6 +12,8 @@ use App\Http\Middleware\countryCheck2;
 use App\Http\Controllers\user_controller_for_db;
 use App\Http\Controllers\studentControllerDb;
 
+use App\Http\Controllers\user_controller_for_hc;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -158,3 +160,5 @@ Route::view('about_mw','about_for_assign_mw');
 Route::get('user_db',[user_controller_for_db::class,'users']);
 
 Route::get('/students',[studentControllerDb::class,'getStudents']);
+
+Route::get('users-hc',[user_controller_for_hc::class,'getUser']);
