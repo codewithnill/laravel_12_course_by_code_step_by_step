@@ -18,12 +18,20 @@ class UserControllerQB extends Controller
         // $result=DB::table('users')->first();
         // $result=[$result]; // single result so used array
 
-        $result=DB::table('users')->insert(['name'=>'Tony','email'=>'tony@test.com','phone'=>'1111']);
+        // $result=DB::table('users')->insert(['name'=>'Tony','email'=>'tony@test.com','phone'=>'1111']);
+
+        $result=DB::table('users')->where('name','Tony')->update(['phone'=>'2222']);
+
+        // if($result) {
+        //     return "Data inserted..";
+        // } else {
+        //     return "Data not inserted..";
+        // }
 
         if($result) {
-            return "Data inserted..";
+            return "Data updated..";
         } else {
-            return "Data not inserted..";
+            return "Data not updated..";
         }
 
         return view('userQB',['users'=>$result]);
