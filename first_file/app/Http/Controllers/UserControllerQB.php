@@ -11,6 +11,7 @@ class UserControllerQB extends Controller
     function queries() {
         // return "queries"; 
         $result=DB::table('users')->get();
-        return $result;
+        // return $result;
+        return view('userQB',['users'=>$result]);
     }
 }
