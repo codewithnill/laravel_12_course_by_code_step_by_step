@@ -10,8 +10,10 @@ class UserControllerQB extends Controller
     //
     function queries() {
         // return "queries"; 
-        $result=DB::table('users')->get();
+        // $result=DB::table('users')->get();
         // return $result;
+
+        $result=DB::table('users')->where('phone','01711111111')->get();
         return view('userQB',['users'=>$result]);
     }
 }
