@@ -29,6 +29,18 @@ class userControllerForHR extends Controller
         else{
             echo "execute code for other request";
         }
+        echo "<br>";
+
+        if($req->is('user')){
+            echo "execute code for user path";
+        }
+        else{
+            echo "execute code for other path";
+        }
+
+        echo "<br>";
+        echo "ip is ".$req->ip();
+
 
 
     }
