@@ -36,4 +36,14 @@ class userControllerForRm extends Controller
         return "Any route method.";
         // return $req;
     }
+
+    function group1() {
+        return "get and post.";
+        // return $req;
+    }
+
+    function group2() {
+        return "put and delete.";
+        // return $req;
+    }
 }
