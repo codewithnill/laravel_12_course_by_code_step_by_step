@@ -9,6 +9,27 @@ class userControllerForHR extends Controller
     //
     function login(Request $req){ 
         // return "login function";
-        return $req;
+        // return $req;
+        echo "request method: " . $req->method();
+        echo "<br>";
+        echo "request path: " . $req->path();
+        echo "<br>";
+        echo "request url: " . $req->url();
+        echo "<br>";
+        echo "name is " . $req->input('name');
+        echo "<br>";
+        print_r($req->input());
+        echo "<br>";
+        print_r($req->collect());
+        echo "<br>";
+
+        if($req->isMethod('post')){
+            echo "execute code for post request";
+        }
+        else{
+            echo "execute code for other request";
+        }
+
+
     }
 }
