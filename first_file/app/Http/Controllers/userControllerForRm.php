@@ -7,8 +7,18 @@ use Illuminate\Http\Request;
 class userControllerForRm extends Controller
 {
     //
-    function get(Request $req) {
-        // return "Get route method.";
-        return $req;
+    function get() {
+        return "Get route method.";
+        // return $req;
+    }
+
+    function post() {
+        return "Post route method.";
+        // return $req;
+    }
+
+    function put() {
+        return "Put route method.";
+        // return $req;
     }
 }
