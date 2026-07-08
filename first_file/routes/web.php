@@ -19,6 +19,8 @@ use App\Http\Controllers\UserControllerQB;
 use App\Http\Controllers\userControllerEqb;
 use App\Http\Controllers\userControllerForRm;
 
+use App\Http\Controllers\userControllerForHR;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -185,3 +187,7 @@ Route::view('form','userViewForRm');
 Route::any('users-rm',[userControllerForRm::class,'any']);
 Route::match(['get','post'],'users-rm',[userControllerForRm::class,'group1']);
 Route::match(['put','delete'],'users-rm',[userControllerForRm::class,'group2']);
+
+
+Route::view('form','userViewForHR');
+Route::post('users-hr',[userControllerForHR::class,'login']);
