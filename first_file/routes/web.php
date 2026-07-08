@@ -177,3 +177,4 @@ Route::get('users-rm',[userControllerForRm::class,'get']);
 Route::view('form','userViewForRm');
 Route::post('users-rm',[userControllerForRm::class,'post']);
 Route::put('users-rm',[userControllerForRm::class,'put']);
+Route::delete('users-rm',[userControllerForRm::class,'delete']);

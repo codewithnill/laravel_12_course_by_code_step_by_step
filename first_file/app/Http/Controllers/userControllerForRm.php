@@ -21,4 +21,9 @@ class userControllerForRm extends Controller
         return "Put route method.";
         // return $req;
     }
+
+    function delete() {
+        return "Delete route method.";
+        // return $req;
+    }
 }
