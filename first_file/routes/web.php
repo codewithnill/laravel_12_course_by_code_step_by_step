@@ -20,6 +20,7 @@ use App\Http\Controllers\userControllerEqb;
 use App\Http\Controllers\userControllerForRm;
 
 use App\Http\Controllers\userControllerForHR;
+use App\Http\Controllers\userControllerForSession;
 
 Route::get('/', function () {
     return view('welcome');
@@ -191,3 +192,6 @@ Route::match(['put','delete'],'users-rm',[userControllerForRm::class,'group2']);
 
 Route::view('form','userViewForHR');
 Route::post('users-hr',[userControllerForHR::class,'login']);
+
+Route::view('login-session','loginForSession');
+Route::post('login-session',[userControllerForSession::class,'login']);
