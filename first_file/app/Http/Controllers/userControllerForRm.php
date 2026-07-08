@@ -31,4 +31,9 @@ class userControllerForRm extends Controller
         return "Patch route method.";
         // return $req;
     }
+
+    function any() {
+        return "Any route method.";
+        // return $req;
+    }
 }

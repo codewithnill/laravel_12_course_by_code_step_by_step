@@ -173,9 +173,12 @@ Route::get('users-qb',[UserControllerQB::class,'queries']);
 Route::get('users-eqb',[userControllerEqb::class,'queries']);
 
 // use of route methods
-Route::get('users-rm',[userControllerForRm::class,'get']);
+// Route::get('users-rm',[userControllerForRm::class,'get']);
+// Route::post('users-rm',[userControllerForRm::class,'post']);
+// Route::put('users-rm',[userControllerForRm::class,'put']);
+// Route::delete('users-rm',[userControllerForRm::class,'delete']);
+// Route::patch('users-rm',[userControllerForRm::class,'patch']);
+
 Route::view('form','userViewForRm');
-Route::post('users-rm',[userControllerForRm::class,'post']);
-Route::put('users-rm',[userControllerForRm::class,'put']);
-Route::delete('users-rm',[userControllerForRm::class,'delete']);
-Route::patch('users-rm',[userControllerForRm::class,'patch']);
+
+Route::any('users-rm',[userControllerForRm::class,'any']);
