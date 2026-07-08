@@ -17,6 +17,7 @@ use App\Http\Controllers\user_controller_for_hc;
 use App\Http\Controllers\UserControllerQB;
 
 use App\Http\Controllers\userControllerEqb;
+use App\Http\Controllers\userControllerForRm;
 
 Route::get('/', function () {
     return view('welcome');
@@ -170,3 +171,7 @@ Route::get('users-hc',[user_controller_for_hc::class,'getUser']);
 Route::get('users-qb',[UserControllerQB::class,'queries']);
 
 Route::get('users-eqb',[userControllerEqb::class,'queries']);
+
+// use of route methods
+Route::get('users-rm',[userControllerForRm::class,'get']);
+Route::view('form','userViewForRm');
