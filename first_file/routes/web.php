@@ -176,3 +176,4 @@ Route::get('users-eqb',[userControllerEqb::class,'queries']);
 Route::get('users-rm',[userControllerForRm::class,'get']);
 Route::view('form','userViewForRm');
 Route::post('users-rm',[userControllerForRm::class,'post']);
+Route::put('users-rm',[userControllerForRm::class,'put']);
