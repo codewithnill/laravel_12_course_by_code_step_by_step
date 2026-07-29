@@ -21,6 +21,7 @@ use App\Http\Controllers\userControllerForRm;
 
 use App\Http\Controllers\userControllerForHR;
 use App\Http\Controllers\userControllerForSession;
+use App\Http\Controllers\userControllerForFlashSession;
 
 Route::get('/', function () {
     return view('welcome');
@@ -199,3 +200,5 @@ Route::view('profile-session','profileForSession');
 
 Route::get('logout-session',[userControllerForSession::class,'logout']);
 
+Route::view('user-flash-session','addUserForFlashSession');
+Route::post('user-flash-session',[userControllerForFlashSession::class,'addUserForFlashSession']);  
