@@ -11,6 +11,8 @@ class uploadController extends Controller
         // return view('upload');
         // echo "File uploaded successfully";
         $path=$req->file('file')->store('public');
-        return $path;
+        $filenamearray=explode('/',$path);
+        $filename=$filenamearray[1];
+        return view('display', ['path'=>$filename]);
     }
 }
