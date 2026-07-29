@@ -11,6 +11,13 @@ class userControllerForSession extends Controller
         // return "login function";
         $req->session()->put('user', $req->input('user'));
         // return redirect('profile-session');
-        echo session('user');
+        // echo session('user');
+    }
+
+    function logout(Request $req){
+        // $req->session()->forget('user');
+        session()->pull('user');
+        return redirect('profile-session');
+        // return redirect('login-session');
     }
 }

@@ -196,3 +196,6 @@ Route::post('users-hr',[userControllerForHR::class,'login']);
 Route::view('login-session','loginForSession');
 Route::post('login-session',[userControllerForSession::class,'login']);
 Route::view('profile-session','profileForSession');
+
+Route::get('logout-session',[userControllerForSession::class,'logout']);
+

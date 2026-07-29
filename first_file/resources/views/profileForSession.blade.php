@@ -8,4 +8,6 @@
     @else
         <h3>No user logged in.</h3>
     @endif
+
+    <a href="/login-session">Logout</a>
 </div>
