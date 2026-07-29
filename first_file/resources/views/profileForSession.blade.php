@@ -11,5 +11,5 @@
 
     <a href="/logout-session">Logout</a>
 
-    {{print_r(session('all_data'))}}
+    {{ session('all_data')['password'] }}
 </div>
