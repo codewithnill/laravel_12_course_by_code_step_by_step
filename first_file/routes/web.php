@@ -208,3 +208,8 @@ Route::post('user-flash-session',[userControllerForFlashSession::class,'addUserF
 
 Route::view('upload','upload');
 Route::post('upload',[uploadController::class,'upload']);
+
+Route::get('welcomeLocalization', function () {
+    return view('welcomeLocalization');
+});
+Route::view('aboutLocalization', 'aboutLocalization');
