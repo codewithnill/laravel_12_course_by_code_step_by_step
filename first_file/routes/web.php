@@ -23,6 +23,9 @@ use App\Http\Controllers\userControllerForHR;
 use App\Http\Controllers\userControllerForSession;
 use App\Http\Controllers\userControllerForFlashSession;
 
+
+use App\Http\Controllers\uploadController;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -202,3 +205,6 @@ Route::get('logout-session',[userControllerForSession::class,'logout']);
 
 Route::view('user-flash-session','addUserForFlashSession');
 Route::post('user-flash-session',[userControllerForFlashSession::class,'addUserForFlashSession']);  
+
+Route::view('upload','upload');
+Route::post('upload',[uploadController::class,'upload']);
