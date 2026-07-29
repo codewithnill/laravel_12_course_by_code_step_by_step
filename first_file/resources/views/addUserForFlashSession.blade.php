@@ -7,6 +7,8 @@
         <span class="success-message">{{ session('message') }}</span>
     @endif
 
+    {{session()->reflash()}}
+
     <form action="user-flash-session" method="post">
         @csrf
         <input type="text" name="username" placeholder="Name"><br><br>
