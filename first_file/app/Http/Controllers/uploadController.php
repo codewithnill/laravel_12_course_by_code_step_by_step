@@ -12,7 +12,7 @@ class uploadController extends Controller
         // echo "File uploaded successfully";
         // $path=$req->file('file')->store('public');
 
-        $path=$req->file('file')->storeAs('public','dummy1.png');
+        $path=$req->file('file')->storeAs('public','dummy2.pdf');
         $filenamearray=explode('/',$path);
         $filename=$filenamearray[1];
         return view('display', ['path'=>$filename]);
