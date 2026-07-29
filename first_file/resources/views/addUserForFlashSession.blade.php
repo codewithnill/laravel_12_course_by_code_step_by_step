@@ -7,7 +7,11 @@
         <span class="success-message">{{ session('message') }}</span>
     @endif
 
-    {{session()->reflash()}}
+    @if(session('name'))
+        <span class="success-message">{{ session('name') }}</span>
+    @endif
+
+    {{session()->keep(['name'])}}
 
     <form action="user-flash-session" method="post">
         @csrf
