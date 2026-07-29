@@ -7,8 +7,10 @@ use Illuminate\Http\Request;
 class uploadController extends Controller
 {
     //
-    function upload(){
+    function upload(Request $req) {
         // return view('upload');
-        echo "File uploaded successfully";
+        // echo "File uploaded successfully";
+        $path=$req->file('file')->store('public');
+        return $path;
     }
 }
