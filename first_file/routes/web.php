@@ -26,6 +26,8 @@ use App\Http\Controllers\userControllerForFlashSession;
 
 use App\Http\Controllers\uploadController;
 
+use App\Http\Controllers\studentController2; 
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -252,3 +254,7 @@ Route::middleware('setLang')->group(function () {
 //     // return redirect()->back();
 //     return redirect('welcomeLocalization');   
 // });
+
+
+Route::view('addStudent', 'addStudent2');
+Route::post('addStudent',[studentController2::class,'addStudent2']);
