@@ -26,4 +26,9 @@ class studentController2 extends Controller
 
         return "add function called.";
     }
+
+    function list() {
+        $studentData = student2::all(); 
+        return view('student2list', ['students' => $studentData]); // this will return the list view with the students data.
+    }
 }
