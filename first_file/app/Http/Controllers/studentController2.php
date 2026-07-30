@@ -40,4 +40,9 @@ class studentController2 extends Controller
             return "Failed to delete student.";
         }
     }
+
+    function editStudent($id) {
+        $studentData = student2::find($id); // find the student by id
+        return view('student2edit', ['student' => $studentData]); // return the edit view with the student data
+    }
 }
