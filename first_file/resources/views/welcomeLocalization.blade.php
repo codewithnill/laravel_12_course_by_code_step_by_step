@@ -11,3 +11,8 @@
 
 <!-- for passing name -->
 <h1>{{ __('welcome.aboutName', ['name' => 'nb nill']) }}</h1>
+
+<h1>choose your lang</h1>
+<a href="/setLang/en">English</a>
+<a href="/setLang/ko">Korean</a>
+<a href="/setLang/bengali">Bengali</a>

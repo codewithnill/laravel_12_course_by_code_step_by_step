@@ -209,13 +209,46 @@ Route::post('user-flash-session',[userControllerForFlashSession::class,'addUserF
 Route::view('upload','upload');
 Route::post('upload',[uploadController::class,'upload']);
 
-Route::get('welcomeLocalization', function () {
-    return view('welcomeLocalization');
-});
-Route::view('aboutLocalization', 'aboutLocalization');
 
-// if we want to enter in url with language
-Route::get('aboutLocalization/{lang}', function ($lang) {
-    App::setLocale($lang);
-    return view('aboutLocalization');
+
+
+
+Route::middleware('setLang')->group(function () {
+    Route::get('welcomeLocalization', function () {
+        return view('welcomeLocalization');
+    });
+    
+
+    // if we want to enter in url with language
+    // Route::get('aboutLocalization/{lang}', function ($lang) {
+    //     App::setLocale($lang);
+    //     return view('aboutLocalization');
+    // });
+
+
+    Route::view('aboutLocalization', 'aboutLocalization');
+
+    Route::get('setLang/{lang}', function ($lang) {
+        session()->put('lang', $lang);
+        // return redirect()->back();
+        return redirect('welcomeLocalization');   
+    });
 });
+
+// Route::get('welcomeLocalization', function () {
+//     return view('welcomeLocalization');
+// });
+// Route::view('aboutLocalization', 'aboutLocalization');
+
+// // if we want to enter in url with language
+// Route::get('aboutLocalization/{lang}', function ($lang) {
+//     App::setLocale($lang);
+//     return view('aboutLocalization');
+// });
+
+
+// Route::get('setLang/{lang}', function ($lang) {
+//     session()->put('lang', $lang);
+//     // return redirect()->back();
+//     return redirect('welcomeLocalization');   
+// });

@@ -9,6 +9,7 @@ use App\Http\Middleware\AgeCheck;
 
 use App\Http\Middleware\ageCheck2;
 use App\Http\Middleware\countryCheck;
+use App\Http\Middleware\setLang;
 
 return Application::configure(basePath: dirname(__DIR__))
     ->withRouting(
@@ -24,6 +25,11 @@ return Application::configure(basePath: dirname(__DIR__))
             ageCheck2::class,
             countryCheck::class,
         ]); // group middleware
+
+
+
+
+        $middleware->appendToGroup('setLang',setLang::class); // group middleware
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         $exceptions->shouldRenderJsonWhen(
