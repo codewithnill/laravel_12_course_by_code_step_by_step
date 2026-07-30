@@ -18,7 +18,7 @@ class studentController2 extends Controller
         $student->save(); // this will save the data in the database.
 
         if($student) {
-            return "Student added successfully.";
+            return redirect('student2list');
         } else {
             return "Failed to add student.";
         }
@@ -30,5 +30,14 @@ class studentController2 extends Controller
     function list() {
         $studentData = student2::all(); 
         return view('student2list', ['students' => $studentData]); // this will return the list view with the students data.
+    }
+
+    function deleteStudent($id) {
+        $isDeleted = student2::destroy($id); // 0 if not deleted, 1 if deleted
+        if($isDeleted) {
+            return redirect('student2list');
+        } else {
+            return "Failed to delete student.";
+        }
     }
 }

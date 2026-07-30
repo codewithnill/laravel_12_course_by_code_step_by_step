@@ -262,3 +262,5 @@ Route::post('addStudent',[studentController2::class,'addStudent2']);
 Route::post('addStudent',[studentController2::class,'addStudent2']);
 Route::get('list',[studentController2::class,'list']);
 
+Route::get('delete/{id}',[studentController2::class,'deleteStudent']);
+
