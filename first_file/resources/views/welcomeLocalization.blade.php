@@ -8,3 +8,6 @@
 <a href="/aboutLocalization">{{__('welcome.about')}}</a>
 <a href="/aboutLocalization">{{__('welcome.home')}}</a>
 <a href="/aboutLocalization">{{__('welcome.contact')}}</a>
+
+<!-- for passing name -->
+<h1>{{ __('welcome.aboutName', ['name' => 'nb nill']) }}</h1>

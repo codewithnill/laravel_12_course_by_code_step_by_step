@@ -7,4 +7,5 @@ return [
     'home' => 'Home',
     'contact' => 'Contact',
     'aboutpage' => 'This is about page',
+    'aboutName' => 'Hi everyone this is :name . how are you doing...'
 ];
