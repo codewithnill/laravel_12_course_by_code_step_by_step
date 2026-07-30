@@ -213,3 +213,9 @@ Route::get('welcomeLocalization', function () {
     return view('welcomeLocalization');
 });
 Route::view('aboutLocalization', 'aboutLocalization');
+
+// if we want to enter in url with language
+Route::get('aboutLocalization/{lang}', function ($lang) {
+    App::setLocale($lang);
+    return view('aboutLocalization');
+});
