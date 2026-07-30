@@ -6,4 +6,5 @@ return [
     'about' => '소개',
     'home' => '홈',
     'contact' => '연락',
+    'aboutpage' => '이건 소개 페이지야',
 ];

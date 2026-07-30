@@ -1,4 +1,8 @@
 <div>
-    <h1>About page</h1>
+    <!-- <h1>About page</h1> -->
+    
+
+    <h1>{{ __('welcome.aboutpage') }}</h1>
+    <h1>This is about page</h1> 
     <!-- If you do not have a consistent goal in life, you can not live it in a consistent way. - Marcus Aurelius -->
 </div>
