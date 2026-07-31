@@ -263,4 +263,6 @@ Route::post('addStudent',[studentController2::class,'addStudent2']);
 Route::get('list',[studentController2::class,'list']);
 
 Route::get('delete/{id}',[studentController2::class,'deleteStudent']);
-Route::get('edit/{id}',[studentController2::class,'editStudent']);
+Route::get('edit/{id}',[studentController2::class,'edit']);
+
+Route::put('edit-student/{id}',[studentController2::class,'editStudent']);

@@ -41,8 +41,23 @@ class studentController2 extends Controller
         }
     }
 
-    function editStudent($id) {
+    function edit($id) {
         $studentData = student2::find($id); // find the student by id
         return view('student2edit', ['student' => $studentData]); // return the edit view with the student data
+    }
+
+    function editStudent(Request $request, $id) {
+        $student = student2::find($id); // find the student by id
+        $student->name=$request->name;
+        $student->email=$request->email;
+        $student->phone=$request->phone;
+
+        $isUpdated = $student->save(); // this will update the data in the database.
+
+        if($isUpdated) {
+            return redirect('list');
+        } else {
+            return "Failed to update student.";
+        }
     }
 }
