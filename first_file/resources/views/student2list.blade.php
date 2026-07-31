@@ -41,8 +41,17 @@
             </tr>
             @endforeach
         </tbody>
+    </table>
+
+    {{ $students->links() }} <!-- This generates pagination links for the student list. -->
 
 
 
     <!-- The biggest battle is the war against ignorance. - Mustafa Kemal Atatürk -->
 </div>
+
+<style>
+    .w-5.h-5 {
+        width: 20px;
+    }
+</style>
