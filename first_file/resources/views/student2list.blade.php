@@ -2,6 +2,11 @@
     <h1>Student List</h1>
     <!-- {{print_r($students)}} -->
 
+    <form action="/search" method="get">
+        <input type="text" name="search" placeholder="Search by name" value="{{ $searchTerm ?? '' }}">
+        <button type="submit">Search</button>
+    </form>
+
     <table border="1">
         <thead>
             <tr>

@@ -266,3 +266,5 @@ Route::get('delete/{id}',[studentController2::class,'deleteStudent']);
 Route::get('edit/{id}',[studentController2::class,'edit']);
 
 Route::put('edit-student/{id}',[studentController2::class,'editStudent']);
+
+Route::get('search',[studentController2::class,'search']);
