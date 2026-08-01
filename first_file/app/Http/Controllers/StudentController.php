@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\student;
 
 class StudentController extends Controller
 {
@@ -21,5 +22,10 @@ class StudentController extends Controller
 
     function about($name) {
         return $name;;
+    }
+
+    function list() {
+        // return "list of students from model.";       
+        return student::all(); // this will return all the students from the database.
     }
 }
