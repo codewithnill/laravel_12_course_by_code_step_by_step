@@ -2,7 +2,7 @@
     <x-slot name="title">Login</x-slot>
     <x-slot name="main">
         <div>
-            <h1>User login</h1>
+            <h1 class="heading">User login</h1>
             <h3>Sub heading for login page</h3>
             <div class="mb-3 row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
