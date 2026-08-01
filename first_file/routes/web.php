@@ -278,3 +278,6 @@ Route::view('home-layout','home_layout');
 Route::view('login-layout','login_layout');
 
 Route::view('admin','admin');
+
+Route::view('login2','login2');
+Route::view('home2','home2');
