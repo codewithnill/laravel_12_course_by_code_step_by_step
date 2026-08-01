@@ -271,3 +271,7 @@ Route::get('search',[studentController2::class,'search']);
 
 
 Route::post('delete-multiple-students',[studentController2::class,'deleteMultipleStudents']);
+
+
+Route::view('about-layout','about_layout');
+Route::view('home-layout','home_layout');                           
