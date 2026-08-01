@@ -17,6 +17,7 @@
                 </div>
             </div>
             <button onclick="changeColor()" type="button" class="btn btn-primary">Login</button>
+            <button onclick="greenColor()" type="button" class="btn btn-secondary">Update color</button>
         </div>
     </x-slot>
 </x-layout>
