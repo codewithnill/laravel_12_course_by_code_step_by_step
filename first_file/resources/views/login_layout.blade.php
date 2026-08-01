@@ -4,11 +4,19 @@
         <div>
             <h1>User login</h1>
             <h3>Sub heading for login page</h3>
-            <input type="text" name="username" placeholder="Enter username">
-            <br><br>
-            <input type="text" name="password" placeholder="Enter password">
-            <br><br>
-            <button type="submit">Login</button>
+            <div class="mb-3 row">
+                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword">
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary">Login</button>
         </div>
     </x-slot>
 </x-layout>
