@@ -276,3 +276,5 @@ Route::post('delete-multiple-students',[studentController2::class,'deleteMultipl
 Route::view('about-layout','about_layout');
 Route::view('home-layout','home_layout');            
 Route::view('login-layout','login_layout');
+
+Route::view('admin','admin');

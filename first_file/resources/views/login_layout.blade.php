@@ -2,7 +2,7 @@
     <x-slot name="title">Login</x-slot>
     <x-slot name="main">
         <div>
-            <h1 class="heading">User login</h1>
+            <h1 id="heading" class="heading">User login</h1>
             <h3>Sub heading for login page</h3>
             <div class="mb-3 row">
                 <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
@@ -16,7 +16,7 @@
                     <input type="password" class="form-control" id="inputPassword">
                 </div>
             </div>
-            <button type="button" class="btn btn-primary">Login</button>
+            <button onclick="changeColor()" type="button" class="btn btn-primary">Login</button>
         </div>
     </x-slot>
 </x-layout>
