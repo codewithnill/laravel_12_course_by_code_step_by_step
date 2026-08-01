@@ -28,7 +28,7 @@ class studentController2 extends Controller
     }
 
     function list() {
-        $studentData = student2::paginate(2); 
+        $studentData = student2::paginate(5); 
         return view('student2list', ['students' => $studentData]); // this will return the list view with the students data.
     }
 
@@ -64,5 +64,16 @@ class studentController2 extends Controller
     function search(Request $request) {
         $studentData= student2::where('name', 'like', "%$request->search%")->get(); // search by name
         return view('student2list', ['students' => $studentData, 'searchTerm' => $request->search]); // return the list view with the students data
+    }
+
+
+    function deleteMultipleStudents(Request $request) {
+        $result = student2::destroy($request->selectedStudents); // delete multiple students by selected IDs
+
+        if ($result) {
+            return redirect('list');
+        } else {
+            return "Failed to delete students.";
+        }
     }
 }
