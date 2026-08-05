@@ -283,3 +283,4 @@ Route::view('login2','login2');
 Route::view('home2','home2');
 
 Route::get('list_student_accessors',[studentController::class,'list']);
+Route::get('save_student_mutators',[studentController::class,'save']);
