@@ -30,6 +30,8 @@ use App\Http\Controllers\studentController2;
 use App\Http\Controllers\sellerController;
 use App\Http\Controllers\emailController;
 
+use App\Http\Controllers\deviceController;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -312,20 +314,17 @@ Route::view('sendEmail','sendEmail');
 
 
 
+// fluent strings code removed.
+// check git commit history for the code.
 
-// fluent strings
-$info="hi, lets learn laravel";
-echo $info . "<br>";
-$info=Str::ucfirst($info); //
-echo $info . "<br>";
-// converting hi to hello
-$info=Str::replaceFirst("Hi","Hello",$info); //
-echo $info . "<br>";
-// camel case
-$info=Str::camel($info); //
-echo $info . "<br>";
 
-$info2="hello world";
-echo $info2 . "<br>";
-$info2=Str::of($info2)->ucfirst($info2)->replaceFirst("Hello","Hi",$info2)->camel($info2);
-echo $info2 . "<br>";
+
+
+
+
+
+Route::get('device/{key}',[deviceController::class,'index']);
+// key is the parameter that will be passed to the index function of the deviceController. The index function will return the value of the key parameter. The key parameter will be passed to the index function as an instance of the Device model. The Device model will be used to retrieve the device from the database using the key parameter. The device will be returned as a JSON response.
+
+// Route::get('device/{key:name}',[deviceController::class,'index']);
+// key is the parameter that will be passed to the index function of the deviceController. The index function will return the value of the key parameter. The key parameter will be passed to the index function as an instance of the Device model. The Device model will be used to retrieve the device from the database using the name column of the devices table. The device will be returned as a JSON response.
