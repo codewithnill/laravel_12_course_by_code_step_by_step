@@ -27,8 +27,8 @@ use App\Http\Controllers\userControllerForFlashSession;
 use App\Http\Controllers\uploadController;
 
 use App\Http\Controllers\studentController2; 
-
 use App\Http\Controllers\sellerController;
+use App\Http\Controllers\emailController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -287,8 +287,18 @@ Route::view('home2','home2');
 Route::get('list_student_accessors',[studentController::class,'list']);
 Route::get('save_student_mutators',[studentController::class,'save']);
 
+
+
+
 Route::get('list_seller',[sellerController::class,'list']);
 
 Route::get('one_to_many_list_seller',[sellerController::class,'OneToManyList']);
 
 Route::get('many_to_one_list',[sellerController::class,'manyToOneList']);
+
+
+
+
+
+
+Route::get('send_email',[emailController::class,'sendEmail']);
