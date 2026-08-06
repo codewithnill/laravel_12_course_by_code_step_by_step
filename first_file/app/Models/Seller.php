@@ -15,4 +15,8 @@ class Seller extends Model
         // parameters: related model, foreign key, local key
         // local key means the primary key of the current model (Seller) which is 'id' by default.
     }
+
+    function ProductManyData() {
+        return $this->hasMany('App\Models\Product');
+    }
 }

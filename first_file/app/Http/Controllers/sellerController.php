@@ -17,4 +17,8 @@ class sellerController extends Controller
         // return Seller::find(11); // finds data from seller
         return Seller::find(11)->productData; // finds data from product table using the relationship defined in the Seller model. It will return the Product related to the Seller with primary key 11.
     }
+
+    function manyList() {
+        return Seller::find(11)->ProductManyData; // finds data from product table using the relationship defined in the Seller model. It will return all Products related to the Seller with primary key 11.
+    }
 }

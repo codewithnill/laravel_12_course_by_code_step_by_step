@@ -288,3 +288,5 @@ Route::get('list_student_accessors',[studentController::class,'list']);
 Route::get('save_student_mutators',[studentController::class,'save']);
 
 Route::get('list_seller',[sellerController::class,'list']);
+
+Route::get('many_list_seller',[sellerController::class,'manyList']);
