@@ -302,3 +302,6 @@ Route::get('many_to_one_list',[sellerController::class,'manyToOneList']);
 
 
 Route::get('send_email',[emailController::class,'sendEmail']);
+
+Route::post('send_email',[emailController::class,'sendEmail']);
+Route::view('sendEmail','sendEmail');

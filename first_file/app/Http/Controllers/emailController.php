@@ -13,11 +13,12 @@ class emailController extends Controller
     //     return "some code";
     // }
 
-    function sendEmail() {
-        $to="nbnill.hmlnmh@gmail.com";
-        $msg="dummy mail";
-        $subject="laravel code step by step";
+    function sendEmail(Request $req) {
+        $to=$req->to;
+        $msg=$req->message;
+        $subject=$req->subject;
         Mail::to($to)->send(new emailLaravel($msg, $subject));
+        return "Email sent successfully";
     }
 
     
