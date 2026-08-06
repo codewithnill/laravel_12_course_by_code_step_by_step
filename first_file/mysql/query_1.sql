@@ -93,7 +93,7 @@ DROP TABLE users;
 CREATE TABLE users (
   id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
-  email VARCHAR(255) NOT NULL UNIQUE,students
+  email VARCHAR(255) NOT NULL UNIQUE,
   phone VARCHAR(20) NOT NULL
 );
 
@@ -140,3 +140,53 @@ INSERT INTO student2 (name, email, phone, created_at, updated_at) VALUES
 ('Karen Robinson', 'karen.robinson@email.com', '+1-555-012-3459', '2024-02-03 17:20:00', '2024-02-03 17:20:00');
 
 SELECT * FROM student2;
+
+-- for seeding
+CREATE TABLE members (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  address VARCHAR(255) NOT NULL
+);
+
+
+
+-- for eloquent relationship topic
+CREATE TABLE sellers (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  created_at TIMESTAMP NULL DEFAULT NULL,
+  updated_at TIMESTAMP NULL DEFAULT NULL
+);
+
+CREATE TABLE products (
+  id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  price DECIMAL(10, 2) NOT NULL,
+  seller_id BIGINT UNSIGNED NOT NULL,
+  created_at TIMESTAMP NULL DEFAULT NULL,
+  updated_at TIMESTAMP NULL DEFAULT NULL,
+  FOREIGN KEY (seller_id) REFERENCES sellers(id)
+);
+
+INSERT INTO sellers (id, name, email, created_at, updated_at)
+VALUES
+(11, 'Anil', 'anil@test.com', NOW(), NOW()),
+(12, 'Sam', 'sam@test.com', NOW(), NOW()),
+(13, 'Rahim', 'rahim@test.com', NOW(), NOW());
+
+
+INSERT INTO products (name, price, seller_id, created_at, updated_at)
+VALUES
+('Samsung', 1000, 11, NOW(), NOW()),
+('Iphone', 300, 12, NOW(), NOW()),
+('Oppo', 400, 13, NOW(), NOW());
+
+
+SELECT * FROM sellers;
+DROP table products;
+DROP table products2;
+SELECT * FROM products;
+
+

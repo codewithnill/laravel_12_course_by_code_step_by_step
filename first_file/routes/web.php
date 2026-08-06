@@ -28,6 +28,8 @@ use App\Http\Controllers\uploadController;
 
 use App\Http\Controllers\studentController2; 
 
+use App\Http\Controllers\sellerController;
+
 Route::get('/', function () {
     return view('welcome');
     // return view('home');
@@ -284,3 +286,5 @@ Route::view('home2','home2');
 
 Route::get('list_student_accessors',[studentController::class,'list']);
 Route::get('save_student_mutators',[studentController::class,'save']);
+
+Route::get('list_seller',[sellerController::class,'list']);
