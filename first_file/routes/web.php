@@ -31,6 +31,7 @@ use App\Http\Controllers\sellerController;
 use App\Http\Controllers\emailController;
 
 use App\Http\Controllers\deviceController;
+use App\Http\Controllers\ProductsController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -328,3 +329,9 @@ Route::get('device/{key}',[deviceController::class,'index']);
 
 // Route::get('device/{key:name}',[deviceController::class,'index']);
 // key is the parameter that will be passed to the index function of the deviceController. The index function will return the value of the key parameter. The key parameter will be passed to the index function as an instance of the Device model. The Device model will be used to retrieve the device from the database using the name column of the devices table. The device will be returned as a JSON response.
+
+
+
+Route::get('productList',[ProductsController::class,'productList']);
+Route::get('addProduct',[ProductsController::class,'addProduct']);
+Route::get('updateProduct',[ProductsController::class,'updateProduct']);
