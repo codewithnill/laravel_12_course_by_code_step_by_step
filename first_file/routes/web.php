@@ -289,4 +289,6 @@ Route::get('save_student_mutators',[studentController::class,'save']);
 
 Route::get('list_seller',[sellerController::class,'list']);
 
-Route::get('many_list_seller',[sellerController::class,'manyList']);
+Route::get('one_to_many_list_seller',[sellerController::class,'OneToManyList']);
+
+Route::get('many_to_one_list',[sellerController::class,'manyToOneList']);

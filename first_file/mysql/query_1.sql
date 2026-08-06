@@ -180,6 +180,8 @@ VALUES
 INSERT INTO products (name, price, seller_id, created_at, updated_at)
 VALUES
 ('Samsung', 1000, 11, NOW(), NOW()),
+('Walton', 5000, 11, NOW(), NOW()),
+('Symphony', 6000, 11, NOW(), NOW()),
 ('Iphone', 300, 12, NOW(), NOW()),
 ('Oppo', 400, 13, NOW(), NOW());
 
@@ -188,5 +190,8 @@ SELECT * FROM sellers;
 DROP table products;
 DROP table products2;
 SELECT * FROM products;
+
+DELETE FROM products
+WHERE id = 4;
 
 
