@@ -305,3 +305,27 @@ Route::get('send_email',[emailController::class,'sendEmail']);
 
 Route::post('send_email',[emailController::class,'sendEmail']);
 Route::view('sendEmail','sendEmail');
+
+
+
+
+
+
+
+
+// fluent strings
+$info="hi, lets learn laravel";
+echo $info . "<br>";
+$info=Str::ucfirst($info); //
+echo $info . "<br>";
+// converting hi to hello
+$info=Str::replaceFirst("Hi","Hello",$info); //
+echo $info . "<br>";
+// camel case
+$info=Str::camel($info); //
+echo $info . "<br>";
+
+$info2="hello world";
+echo $info2 . "<br>";
+$info2=Str::of($info2)->ucfirst($info2)->replaceFirst("Hello","Hi",$info2)->camel($info2);
+echo $info2 . "<br>";
