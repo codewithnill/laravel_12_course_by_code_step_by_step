@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\studentController;
+use App\Http\Controllers\memberController;
 
 Route::get('/user', function (Request $request) {
     return $request->user();
@@ -20,3 +21,6 @@ Route::post('add_students',[studentController::class,'add']);
 Route::put('update_students',[studentController::class,'update']);
 
 Route::delete('delete_students/{id}',[studentController::class,'deleteStudent']);
+
+
+Route::resource('members', memberController::class);
