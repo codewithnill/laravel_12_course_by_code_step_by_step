@@ -26,4 +26,19 @@ class studentController extends Controller
             return ["result"=>"student not added"];
         }
     }
+
+
+
+    function update(Request $req){
+        //return $req->input(); // this will return all the input data from the request
+        $student = student::find($req->id);
+        $student->name = $req->name;
+        $student->email = $req->email;
+        $student->batch = $req->batch;
+        if($student->save()){
+            return ["result"=>"student updated successfully"];
+        } else {
+            return ["result"=>"student not updated"];
+        }
+    }
 }
