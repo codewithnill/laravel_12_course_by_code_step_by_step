@@ -18,3 +18,5 @@ Route::post('add_students',[studentController::class,'add']);
 
 
 Route::put('update_students',[studentController::class,'update']);
+
+Route::delete('delete_students/{id}',[studentController::class,'deleteStudent']);
