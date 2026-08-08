@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\student;
+// importing validation class
+use Illuminate\Support\Facades\Validator;
 
 class studentController extends Controller
 {
@@ -13,18 +15,34 @@ class studentController extends Controller
     }
 
     function add(Request $req){
-        //return $req->input(); // this will return all the input data from the request
-        $student = new student();
-        $student->name = $req->name;
-        $student->email = $req->email;
-        $student->batch = $req->batch;
-        if($student->save()){
-            // return "student added successfully";
-            return ["result"=>"student added successfully"];
+        $rules = array(
+            "name"=>"required|min:2|max:15",
+            "email"=>"required|email",
+            "batch"=>"required"
+        );
+
+        $validation = Validator::make($req->all(),$rules);
+
+        if($validation->fails()){
+            return $validation->errors();
         } else {
-            // return "student not added";
-            return ["result"=>"student not added"];
+            $student = new student();
+            $student->name = $req->name;
+            $student->email = $req->email;
+            $student->batch = $req->batch;
+            if($student->save()){
+                // return "student added successfully";
+                return ["result"=>"student added successfully"];
+            } else {
+                // return "student not added";
+                return ["result"=>"student not added"];
+            }
         }
+    
+
+
+        //return $req->input(); // this will return all the input data from the request
+        
     }
 
 
